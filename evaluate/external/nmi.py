@@ -2,6 +2,10 @@ import math
 import numpy as np
 from sklearn.metrics import normalized_mutual_info_score
 
+'''
+    nmi in [0,1], clustering is better when closing to 1
+'''
+
 def NMI(A,B):
     total = len(A)
     A_ids = set(A)
@@ -31,8 +35,8 @@ def NMI(A,B):
     return MIhat
 
 def eval_nmi(labels, assignments):
-    result_NMI = normalized_mutual_info_score(A, B)
-    #result_NMI = NMI(A, B)
+    result_NMI = normalized_mutual_info_score(labels, assignments)
+    #result_NMI = NMI(labels, assignments)
     return result_NMI
 
 

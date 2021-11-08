@@ -2,6 +2,10 @@ from sklearn.datasets import make_blobs
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
+'''
+    sc in [-1,1], clustering is better when closing to 1
+'''
+
 #Silhouette Coefficient
 def eval_sc(data, assignments):
     # The silhouette_score gives the average value for all the samples.
