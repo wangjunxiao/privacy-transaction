@@ -6,8 +6,8 @@ from sklearn.metrics import f1_score
 '''
 
 #F1 Score
-def eval_f1(labels, assignments, average):
-    result_F1 = f1_score(labels, assignments, average)
+def eval_f1(labels, assignments, average='weighted'):
+    result_F1 = f1_score(labels, assignments, average=average)
     return result_F1
 
 def test():

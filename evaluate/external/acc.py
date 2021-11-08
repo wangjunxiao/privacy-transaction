@@ -2,7 +2,8 @@ import numpy as np
 from sklearn.metrics import accuracy_score
 
 '''
-    acc in [0,1], clustering is better when closing to 1
+    acc in [0,1], 
+    clustering is better when closing to 1
 '''
 
 #Cluster Accuracy
