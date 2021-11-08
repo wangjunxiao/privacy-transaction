@@ -17,9 +17,11 @@ def evaluate(labels, data):
 
 def main():
     labels, data = mnist.loader()
+    print(f'processing request to delete {num_dels} from total {len(data)} points')
     evaluate(labels, data)
     #retrain from scratch and evaluate
-    evaluate(deletion(num_dels, labels, data))
+    labels, data = deletion(num_dels, labels, data)
+    evaluate(labels, data)
     
     
 if __name__=='__main__':
